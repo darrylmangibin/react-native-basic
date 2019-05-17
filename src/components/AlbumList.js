@@ -1,8 +1,9 @@
 import React from 'react';
-import  { View, Text } from 'react-native';
+import  { View } from 'react-native';
 import { connect } from 'react-redux'
 import { fetchList } from '../actions/index';
-import axios from 'axios';
+
+import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends React.Component {
 
@@ -13,7 +14,10 @@ class AlbumList extends React.Component {
   renderAlbums() {
     return this.props.albums.map((album, i) => {
       return (
-        <Text key={i}>{album.title}</Text>
+        <AlbumDetail 
+          key={i}
+          album={album}
+        />
       )
     })
   }

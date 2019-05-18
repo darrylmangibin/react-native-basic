@@ -13,7 +13,7 @@ const store = createStore(reducers, applyMiddleware(thunk))
 
 const App = () => {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Header 
         headerText="Albums"
       />

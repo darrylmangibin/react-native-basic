@@ -1,5 +1,5 @@
 import React from 'react';
-import  { View } from 'react-native';
+import  { ScrollView } from 'react-native';
 import { connect } from 'react-redux'
 import { fetchList } from '../actions/index';
 
@@ -25,9 +25,9 @@ class AlbumList extends React.Component {
   render() {
     console.log(this.props.albums)
     return (
-      <View>
+      <ScrollView>
         {this.renderAlbums()}
-      </View>
+      </ScrollView>
     );
   }
 };

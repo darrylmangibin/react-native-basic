@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const AlbumDetail = (props) => {
   return (
@@ -24,6 +25,9 @@ const AlbumDetail = (props) => {
           style={styles.imageStyle}
           source={{ uri: props.album.image }}
         />
+      </CardSection>
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   )
@@ -48,8 +52,9 @@ const styles = StyleSheet.create({
     marginRight: 10
   },
   imageStyle: {
-    height: 300,
-    flex: 1
+    height: 350,
+    flex: 1,
+    width: null
   }
 })
 
